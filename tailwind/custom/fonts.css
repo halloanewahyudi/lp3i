@@ -1,0 +1,44 @@
+/**
+ * Custom `@font-face` rules
+ *
+ * These will be added immediately before Tailwind’s `base` layer.
+ */
+ @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+@layer base {
+ 
+    body {
+
+        color: #4a4a4a;
+    }
+    h1,h2,h3,h4,h5,h6{
+        line-height: 120%;
+        @apply text-gray-900;
+    }
+    h1,h2,h3,h4{
+        @apply font-bold;
+    }
+    h1{
+        font-size: 3.815rem;
+    }
+    h2{ 
+        font-size: 3.052rem;
+    }
+    h3{
+        font-size: 2.441rem;
+    }
+    h4{
+        font-size: 1.953rem;
+    }
+    h5{
+        font-size: 1.563rem;
+    }
+    h6{
+        font-size: 1.25rem;
+    }
+    p{
+        line-height: 160%;
+        margin-bottom: 30px;
+    }
+
+}
