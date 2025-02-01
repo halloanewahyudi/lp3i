@@ -46,12 +46,15 @@ module.exports = {
 					900: '#0d4f54',
 					950: '#002d33',
 				},
+				tertiary:'#ff0000'
 			},
 			container: {
 				center: true,
 				padding: {
 					DEFAULT: '1rem',
 					lg: '2rem',
+					xl: '3rem',
+					'2xl': '4rem',
 				},
 			},
 			screens: {

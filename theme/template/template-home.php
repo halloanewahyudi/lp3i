@@ -12,6 +12,8 @@ if(have_posts()):
       get_template_part( 'template-parts/home/section', 'one');
       get_template_part( 'template-parts/home/section', 'two');
       get_template_part( 'template-parts/home/section', 'three');
+      get_template_part( 'template-parts/home/section', 'four');
+      get_template_part( 'template-parts/home/section', 'five');
     endwhile;
 endif;
  ?>

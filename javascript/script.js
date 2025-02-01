@@ -12,7 +12,7 @@
 import Alpine from 'alpinejs'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
-import './menu'
+
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -20,7 +20,6 @@ window.Alpine = Alpine
  
 Alpine.start()
 
-console.log('script masuk')
 
 document.addEventListener('DOMContentLoaded', () => {
 // every class fadeup di scroll

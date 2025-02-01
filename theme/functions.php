@@ -144,6 +144,8 @@ function lp3i_widgets_init() {
 }
 add_action( 'widgets_init', 'lp3i_widgets_init' );
 
+
+
 /**
  * Enqueue scripts and styles.
  */
@@ -210,6 +212,11 @@ require get_template_directory() . '/inc/fungsi-tambahan.php';
 * custom post type
 */
 require get_template_directory() . '/cpt/cpt-slideshow.php';
+require get_template_directory() . '/cpt/cpt-mitra.php';
+require get_template_directory() . '/cpt/cpt-campus.php';
+require get_template_directory() . '/cpt/cpt-alumni.php';
+require get_template_directory() . '/cpt/cpt-program-study.php';
+
 
 // menoinaktifkan konten editor
 function disable_editor_for_pages() {

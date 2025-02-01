@@ -12,8 +12,8 @@ $home_s2_featured_3 = $home_section_2['home_s2_featured_3'];
     <div class="container">
         <h3 class="text-secondary text-center mb-12"><?php echo $home_s2_judul_section; ?></h3>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10">
-            <div id="kiri" class="rounded-xl bg-white overflow-hidden h-full group border hover:shadow-lg duration-200">
-                <img class="w-full h-auto object-cover fade-up" src="<?php echo $home_s2_featured_1['image']; ?>">
+            <div id="kiri" class="fade-up rounded-xl bg-white overflow-hidden h-full group border hover:shadow-lg duration-200">
+                <img class="w-full h-auto object-cover " src="<?php echo $home_s2_featured_1['image']; ?>">
                 <div class="p-6 lg:p-10 flex flex-col gap-5">
                     <h4><?php echo $home_s2_featured_1['title']; ?></h4>
                     <p><?php echo $home_s2_featured_1['text']; ?></p>
@@ -22,8 +22,8 @@ $home_s2_featured_3 = $home_section_2['home_s2_featured_3'];
                     </div>
                 </div>
             </div>
-            <div id="kanan" class="rounded-xl bg-white overflow-hidden h-full group border hover:shadow-lg duration-200">
-                <img class="w-full h-auto object-cover fade-up" src="<?php echo $home_s2_featured_2['image']; ?>">
+            <div id="kanan" class="fade-up rounded-xl bg-white overflow-hidden h-full group border hover:shadow-lg duration-200">
+                <img class="w-full h-auto object-cover " src="<?php echo $home_s2_featured_2['image']; ?>">
                 <div class="p-6 lg:p-10 flex flex-col gap-5">
                     <h4><?php echo $home_s2_featured_2['title']; ?></h4>
                     <p><?php echo $home_s2_featured_2['text']; ?></p>
