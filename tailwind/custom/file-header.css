@@ -1,0 +1,53 @@
+/*!
+Theme Name: lp3i
+Theme URI: https://underscoretw.com/
+Author: wahyudi
+Author URI: https://underscoretw.com/
+Description: theme untuk lp3i
+Version: 0.1.0
+Tested up to: 6.2
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: lp3i
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+lp3i is based on _tw https://underscoretw.com/, (C) 2021-2025 Greg Sullivan
+_tw is distributed under the terms of the GNU GPL v2 or later.
+
+_tw is based on Underscores https://underscores.me/ and Varia https://github.com/Automattic/themes/tree/master/varia, (C) 2012-2025 Automattic, Inc.
+Underscores and Varia are distributed under the terms of the GNU GPL v2 or later.
+*/
+
+.custom-logo-link img {
+    width: 50px;
+}
+.menu-primary-container{
+    @apply w-full;
+}
+.menu-primary-container > .menu{
+    @apply flex flex-col  lg:flex-row items-center;
+}
+#primary-menu.menu li{
+    @apply relative;
+}
+#primary-menu.menu li a{
+    @apply flex items-center gap-2 py-2 px-4 rounded-full hover:bg-primary-dark hover:text-light duration-200;
+}
+#primary-menu .current-menu-item a{
+    @apply bg-primary-dark text-light flex items-center gap-2;
+}
+#primary-menu .current-menu-item a::after{
+    content: '';
+    @apply w-2 h-2 rounded-full bg-tertiary block;
+}
+#primary-menu.menu li .sub-menu{
+   @apply bg-primary text-white lg:rounded-b-xl absolute top-full z-50 lg:w-[200px] p-4 left-0 hidden ;
+}
+#primary-menu.menu li:hover .sub-menu {
+   @apply flex flex-col gap-2 lg:pt-4 ;
+
+}

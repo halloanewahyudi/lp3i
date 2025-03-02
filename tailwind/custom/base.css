@@ -1,0 +1,95 @@
+/**
+ * Custom styles to immediately follow Tailwind’s `base` layer
+ */
+
+/**
+ * This uses the background and foreground colors declared in the `theme.json`
+ * file and is applied both to the front end and in the block editor.
+ */
+ 
+body {
+	@apply bg-background text-foreground font-sans;
+	
+	font-family: "Nunito", serif;
+	font-optical-sizing: auto;
+	font-weight: 200 - 800;
+	font-style: normal;
+}
+
+.btn {
+	@apply bg-primary text-light py-2.5 px-6 rounded-full inline-block hover:bg-primary-dark  duration-300 ease-in-out;
+}
+
+.btn-secondary {
+	@apply bg-secondary text-light py-2.5 px-6 rounded-full inline-block hover:bg-secondary-dark  duration-300 ease-in-out;
+}
+
+.btn-tertiary {
+	@apply bg-tertiary text-light py-2.5 px-6 rounded-full inline-block hover:bg-tertiary/80 duration-300 ease-in-out;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@apply font-bold;
+	line-height: 1.2;
+}
+
+h1 {
+	@apply text-4xl lg:text-6xl;
+}
+
+h2 {
+	@apply text-3xl lg:text-5xl;
+}
+
+h3 {
+	@apply text-2xl lg:text-4xl;
+}
+
+h4 {
+	@apply text-xl lg:text-3xl;
+}
+
+h5 {
+	@apply text-lg lg:text-2xl;
+}
+
+h6 {
+	@apply text-base lg:text-xl;
+}
+
+p{
+	line-height: 1.6;
+}
+ul{
+	line-height: 1.6;
+	padding: 0;
+	margin: 0;
+}
+
+.text-info{
+	@apply text-secondary
+}
+
+/* cf 7 styleing */
+input.wpcf7-form-control, select.wpcf7-form-control, textarea.wpcf7-form-control {
+	@apply w-full py-2 px-5 rounded-xl border border-secondary/50 bg-white  ;
+}
+input[type="submit"].wpcf7-form-control {
+	@apply bg-primary text-light py-2 px-6 mt-5 rounded-xl max-w-max inline-block hover:bg-primary-dark  duration-300 ease-in-out;
+}
+
+.form-kelas-karyawan .wpcf7-form{
+	@apply grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10;
+}
+.form-kelas-karyawan .wpcf7-form label{
+	@apply text-base;
+}
+.form-kelas-karyawan .wpcf7-form .kiri,
+.form-kelas-karyawan .wpcf7-form .kanan{
+  @apply p-6 bg-white rounded-xl shadow-2xl;
+} 

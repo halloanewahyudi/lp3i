@@ -1,0 +1,79 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"slug": "background",
+					"color": "#ffffff",
+					"name": "Background"
+				},
+				{
+					"slug": "foreground",
+					"color": "#504d4d",
+					"name": "Foreground"
+				},
+				{
+					"slug": "primary",
+					"color": "#004369",
+					"name": "Primary"
+				},
+				{
+					"slug": "primary-light",
+					"color": "#005f94",
+					"name": "Primary Light"
+				},
+				{
+					"slug": "primary-dark",
+					"color": "#003151",
+					"name": "Primary Dark"
+				},
+				{
+					"slug": "secondary",
+					"color": "#009da5",
+					"name": "Secondary"
+				},
+				{
+					"slug": "secondary-light",
+					"color": "#04c3c8",
+					"name": "Secondary Light"
+				},
+				{
+					"slug": "secondary-dark",
+					"color": "#057980",
+					"name": "Secondary Dark"
+				},
+				{
+					"slug": "tertiary",
+					"color": "#ff4e5d",
+					"name": "Tertiary"
+				},
+				{
+					"slug": "light",
+					"color": "#eef9ff",
+					"name": "Light"
+				}
+			]
+		},
+		"layout": {
+			"contentSize": "40rem",
+			"wideSize": "60rem"
+		},
+		"typography": {
+			"fontFamilies": [
+				{
+					"slug": "nunito",
+					"name": "Nunito",
+					"fontFace": [
+						{
+							"fontFamily": "Nunito",
+							"fontStyle": "normal",
+							"fontWeight": "100 900"
+						}
+					]
+				}
+			]
+		}
+	}
+}
