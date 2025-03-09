@@ -9,10 +9,11 @@ $right_text = $section_3['right_text'];
             <div class="lg:col-span-2">
                 <img src="<?php echo $left_image['url']; ?>" alt="<?php echo $left_image['title']; ?>" class="w-full">
             </div>
-            <div class="lg:col-span-3">
-            <p class=" text-xl">
-                <?php echo $right_text; ?>
-            </p>
+
+            <div class="lg:col-span-3 >
+                <div class=" text-xl flex flex-col gap-5" >
+                    <?php echo $right_text; ?>
+                </div>
             </div>
         </div>
     </div>

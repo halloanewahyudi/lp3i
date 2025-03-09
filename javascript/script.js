@@ -10,28 +10,27 @@
  */
 
 import Alpine from 'alpinejs';
+import intersect from '@alpinejs/intersect'
 import Splide from '@splidejs/splide';
-import  AOS  from 'aos';
 
 window.Alpine = Alpine;
+Alpine.plugin(intersect)
 Alpine.start();
 
 document.addEventListener('DOMContentLoaded', function () {
+	// start script =================
 
-        // start script =================
+	// home slideshow
+	new Splide('#home-slideshow', {
+		autoplay: true,
+		perPage: 1,
+		perMove: 1,
+		speed: 1500,
+		//  pauseOnHover: false,
+		type: 'loop',
+	}).mount();
+	/// end script=================
 
-        // home slideshow
-		new Splide('#home-slideshow', {
-            autoplay: true,
-            perPage: 1,
-            perMove: 1,
-            speed: 1500,
-          //  pauseOnHover: false,
-            type: 'loop'
-        }).mount();
-
-        AOS.init();
-        
-        /// end script=================
 });
+
 

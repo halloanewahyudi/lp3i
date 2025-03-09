@@ -8,7 +8,7 @@ $background = $home_section_5['background'];
     <div class="container">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div class="p-6">
-                <h2 class="text-4xl font-bold mb-16 text-white" data-aos="fade-up" data-aos-duration="700">
+                <h2 class="text-4xl font-bold mb-16 text-white" x-data="{show:false}" x-intersect="show = true" x-intersect:leave="show = false" :class="show ? 'fade-up opacity-100' : 'opacity-0'">
                     <?php echo $home_s5_judul_section; ?>
                 </h2>
 

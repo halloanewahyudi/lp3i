@@ -21,7 +21,8 @@ $button = $kanan['button'];
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div class="relative h-full"> <!-- kiri -->
                 <img src="<?php echo $image; ?>" alt="">
-                <div data-aos="fade-up" data-aos-duration="700" class="absolute top-1/2 right-1/2 lg:-right-12  -translate-y-1/2 max-w-[200px] bg-secondary p-6 rounded-xl flex items-center justify-center">
+                <div x-data="{show:false}" x-intersect="show = true" x-intersect:leave="show = false" :class="show ? 'fade-up opacity-100' : 'opacity-0'"
+                 class="absolute top-1/2 right-1/2 lg:-right-12  -translate-y-1/2 max-w-[200px] bg-secondary p-6 rounded-xl flex items-center justify-center">
                     <div class="text-center">
                         <h2 class="text-4xl font-bold mb-2 text-white"><?php echo $angka; ?></h2>
                         <p class="text-white text-xl"><?php echo $counter_text; ?></p>
@@ -29,7 +30,7 @@ $button = $kanan['button'];
                 </div>
             </div>
             <div class="px-6 lg:px-10"> <!-- kanan -->
-                <h2 class="text-4xl font-bold mb-2" data-aos="fade-up" data-aos-duration="700"><?php echo $kanan_title; ?></h2>
+                <h2 class="text-4xl font-bold mb-2 text-secondary" data-aos="fade-up" data-aos-duration="700"><?php echo $kanan_title; ?></h2>
                 <p class="mb-4"><?php echo $kanan_description; ?></p>
                 <ul class="mb-4">
                     <?php foreach ($kanan_list as $list) { ?>

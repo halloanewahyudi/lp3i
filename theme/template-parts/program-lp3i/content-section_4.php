@@ -2,6 +2,8 @@
 $tabs = get_field('tabs');
 $tab = $tabs['tab'];
 ?>
+
+
 <section class="mb-24">
     <div class="container" x-data="{ activeTab: 0 }">
         <div class="tabs">

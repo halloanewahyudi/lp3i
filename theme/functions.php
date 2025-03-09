@@ -152,11 +152,11 @@ function lp3i_scripts() {
 	wp_enqueue_style( 'lp3i-font', get_template_directory_uri() . '/fonts/font.css', array(), LP3I_VERSION ); // wp_enqueue_style( $handle:string, $file:string', $src:string, $deps:array, $ver:string|boolean|null, $media:string )
 	wp_enqueue_style( 'lp3i-icons', get_template_directory_uri() . '/bootstrap-icons/font/bootstrap-icons.min.css', array(), LP3I_VERSION );
 
-	wp_enqueue_style( 'lp3i-sal', get_template_directory_uri() . '/css/aos.css', array(), LP3I_VERSION );
+	wp_enqueue_style( 'lp3i-sal', get_template_directory_uri() . '/aos/aos.css', array(), LP3I_VERSION );
 	wp_enqueue_style( 'lp3i-splide', get_template_directory_uri() . '/css/splide.min.css', array(), LP3I_VERSION );
 
 	wp_enqueue_script( 'lp3i-script', get_template_directory_uri() . '/js/script.min.js', array(), LP3I_VERSION, true );
-
+	wp_enqueue_script( 'lp3i-aos-script', get_template_directory_uri() . '/aos/aos.js', array(), LP3I_VERSION, true );
 	
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -223,3 +223,11 @@ require get_template_directory() . '/inc/template-functions.php';
  * Component functions.
  */
 require get_template_directory() . '/inc/template-components.php';
+
+
+// upload svg
+function allow_svg_upload($mimes) {
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
+}
+add_filter('upload_mimes', 'allow_svg_upload');
