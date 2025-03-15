@@ -64,9 +64,9 @@ $tab = $tabs['tab'];
                             </div>
                         <?php else: ?>
                             <div class="">
-                                <h5 class="text-secondary mb-10">Apakah Anda tertarik mengikuti program <span class="text-tertiary font-extrabold">Kelas Karyawan </span>  dari LP3I Group? </h5>
+                               <!--  <h5 class="text-secondary mb-10">Apakah Anda tertarik mengikuti program <span class="text-tertiary font-extrabold">Kelas Karyawan </span>  dari LP3I Group? </h5> -->
                                <div class="form-kelas-karyawan">
-                               <?php echo do_shortcode('[contact-form-7 id="8f88add" title="Kelas Karyawan"]'); ?>
+                               <?php //  echo do_shortcode('[contact-form-7 id="8f88add" title="Kelas Karyawan"]'); ?>
                                </div>
                             </div>
                         <?php endif; ?>

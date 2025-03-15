@@ -29,8 +29,9 @@ document.addEventListener('DOMContentLoaded', function () {
 		//  pauseOnHover: false,
 		type: 'loop',
 	}).mount();
-	/// end script=================
 
+
+	/// end script=================
 });
 
 

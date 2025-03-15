@@ -38,4 +38,14 @@
 		</div>
 	</div>
 </header><!-- #masthead -->
+<?php 
+if(!is_home(  ) && !is_front_page(  )):?>
+<div class="bg-gradient-to-r from-primary via-secondary to-tertiary py-1">
+	<div class="container">
+	<?php custom_breadcrumb(); ?>
+	</div>
+</div>
+<?php endif; ?>
+
+
 

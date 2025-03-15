@@ -75,6 +75,8 @@ ul{
 	@apply text-secondary
 }
 
+
+
 /* cf 7 styleing */
 input.wpcf7-form-control, select.wpcf7-form-control, textarea.wpcf7-form-control {
 	@apply w-full py-2 px-5 rounded-xl border border-secondary/50 bg-white  ;
@@ -93,3 +95,19 @@ input[type="submit"].wpcf7-form-control {
 .form-kelas-karyawan .wpcf7-form .kanan{
   @apply p-6 bg-white rounded-xl shadow-2xl;
 } 
+
+/* bread crumb  */
+.breadcrumb li{
+	@apply inline-flex items-center font-semibold  text-white;
+}
+.breadcrumb li a{
+	@apply  font-normal not-italic;
+}
+.breadcrumb li::after {
+    content: "›";
+    @apply px-2 block ;
+}
+.breadcrumb li:last-child::after {
+    content: "";
+}
+

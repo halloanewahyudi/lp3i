@@ -24,8 +24,8 @@ $table = $section_four['table'];
         </div>
         
         <!-- Popup -->
-        <div x-show="activeTab !== null" class="fixed inset-0 bg-primary bg-opacity-50 flex items-center justify-center p-4">
-            <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-lg relative">
+        <div x-show="activeTab !== null" class="fixed inset-0 bg-primary bg-opacity-50 flex flex-col items-center justify-center p-4 py-10">
+            <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-lg relative overflow-y-auto ">
                 <button class="absolute top-2 right-2 text-red-500 text-3xl cursor-pointer" @click="activeTab = null">&times;</button>
                 
                 <?php if ($table) { 

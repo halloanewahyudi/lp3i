@@ -149,15 +149,16 @@ add_action( 'widgets_init', 'lp3i_widgets_init' );
  */
 function lp3i_scripts() {
 	wp_enqueue_style( 'lp3i-style', get_stylesheet_uri(), array(), LP3I_VERSION );
-	wp_enqueue_style( 'lp3i-font', get_template_directory_uri() . '/fonts/font.css', array(), LP3I_VERSION ); // wp_enqueue_style( $handle:string, $file:string', $src:string, $deps:array, $ver:string|boolean|null, $media:string )
+	wp_enqueue_style( 'lp3i-font', get_template_directory_uri() . '/fonts/font.css', array(), LP3I_VERSION ); 
+
+	wp_enqueue_style( 'lp3i-style-tambahan', get_template_directory_uri() . '/css/tambahan.css', array(), LP3I_VERSION );
+
 	wp_enqueue_style( 'lp3i-icons', get_template_directory_uri() . '/bootstrap-icons/font/bootstrap-icons.min.css', array(), LP3I_VERSION );
 
-	wp_enqueue_style( 'lp3i-sal', get_template_directory_uri() . '/aos/aos.css', array(), LP3I_VERSION );
 	wp_enqueue_style( 'lp3i-splide', get_template_directory_uri() . '/css/splide.min.css', array(), LP3I_VERSION );
 
 	wp_enqueue_script( 'lp3i-script', get_template_directory_uri() . '/js/script.min.js', array(), LP3I_VERSION, true );
-	wp_enqueue_script( 'lp3i-aos-script', get_template_directory_uri() . '/aos/aos.js', array(), LP3I_VERSION, true );
-	
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -225,9 +226,70 @@ require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/template-components.php';
 
 
-// upload svg
+/**  create location list
+ * =========================================*/
+
+function create_location_list($term) {
+	$args = array(
+		'post_type' => 'campus',
+		'posts_per_page' => -1,
+		'post_status' => 'publish',
+		 'tax_query' => array(
+			array(
+				'taxonomy' => 'campus_category',
+				'field' => 'slug',
+				'terms' => $term,
+			)
+		 )
+	);
+	return $args;
+
+}
+
+
+/** upload SVG
+ * =========================================*/
 function allow_svg_upload($mimes) {
     $mimes['svg'] = 'image/svg+xml';
     return $mimes;
 }
 add_filter('upload_mimes', 'allow_svg_upload');
+
+/** bradcrumb
+ * =========================================*/
+function custom_breadcrumb() {
+    if (is_front_page()) return; // Jangan tampilkan breadcrumb di halaman depan
+
+    echo '<nav class="breadcrumb"><ul class="flex items-center text-sm">';
+
+    // Home Link
+    echo '<li><a href="' . home_url() . '">Home</a></li>';
+
+    if (is_category() || is_single()) {
+        $category = get_the_category();
+        if ($category) {
+            $first_category = $category[0];
+            echo '<li><a href="' . get_category_link($first_category->term_id) . '">' . $first_category->name . '</a></li>';
+        }
+        if (is_single()) {
+            echo '<li>' . get_the_title() . '</li>';
+        }
+    } elseif (is_page()) {
+        global $post;
+        if ($post->post_parent) {
+            $parents = array_reverse(get_post_ancestors($post->ID));
+            foreach ($parents as $parent) {
+                echo '<li><a href="' . get_permalink($parent) . '">' . get_the_title($parent) . '</a></li>';
+            }
+        }
+        echo '<li>' . get_the_title() . '</li>';
+    } elseif (is_archive()) {
+        echo '<li>' . post_type_archive_title('', false) . '</li>';
+    } elseif (is_search()) {
+        echo '<li>Search results for: "' . get_search_query() . '"</li>';
+    } elseif (is_404()) {
+        echo '<li>404 - Not Found</li>';
+    }
+
+    echo '</ul></nav>';
+}
