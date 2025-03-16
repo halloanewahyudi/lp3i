@@ -258,12 +258,18 @@ add_filter('upload_mimes', 'allow_svg_upload');
 /** bradcrumb
  * =========================================*/
 function custom_breadcrumb() {
+	
     if (is_front_page()) return; // Jangan tampilkan breadcrumb di halaman depan
 
     echo '<nav class="breadcrumb"><ul class="flex items-center text-sm">';
-
+   
     // Home Link
     echo '<li><a href="' . home_url() . '">Home</a></li>';
+
+	if (is_home() && get_option('page_for_posts')) {
+        echo '<li> <span>Blog</span></li>';
+    }
+
 
     if (is_category() || is_single()) {
         $category = get_the_category();

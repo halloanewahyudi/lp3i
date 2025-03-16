@@ -77,7 +77,8 @@ ul{
 
 
 
-/* cf 7 styleing */
+/* cf 7 styleing
+==================================== */
 input.wpcf7-form-control, select.wpcf7-form-control, textarea.wpcf7-form-control {
 	@apply w-full py-2 px-5 rounded-xl border border-secondary/50 bg-white  ;
 }
@@ -96,7 +97,8 @@ input[type="submit"].wpcf7-form-control {
   @apply p-6 bg-white rounded-xl shadow-2xl;
 } 
 
-/* bread crumb  */
+/* bread crumb  
+====================================*/
 .breadcrumb li{
 	@apply inline-flex items-center font-semibold  text-white;
 }
@@ -111,3 +113,12 @@ input[type="submit"].wpcf7-form-control {
     content: "";
 }
 
+/* Blog page 
+====================================*/
+
+
+/* tags
+====================================*/
+.tags a{
+	@apply bg-gray-100 p-1 rounded  hover:bg-gray-200  duration-300 ease-in-out ;
+}
