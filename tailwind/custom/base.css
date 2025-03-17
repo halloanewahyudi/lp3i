@@ -122,3 +122,12 @@ input[type="submit"].wpcf7-form-control {
 .tags a{
 	@apply bg-gray-100 p-1 rounded  hover:bg-gray-200  duration-300 ease-in-out ;
 }
+
+/* pagination
+====================================*/
+.pagination .page-numbers{
+	@apply bg-gray-100 p-2 rounded  hover:bg-gray-200  duration-300 ease-in-out ;
+}
+.page-numbers.current{
+	@apply bg-primary text-light;
+}
