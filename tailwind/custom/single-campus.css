@@ -1,0 +1,18 @@
+.single-campus h2.wp-block-heading{
+    @apply text-3xl lg:text-4xl text-secondary font-bold mb-4;
+}
+.jadwal ul{
+    @apply flex flex-col  divide-y divide-white/40;
+}
+.jadwal li{
+    @apply py-2;
+}
+.single-campus .gallery {
+    @apply grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5  gap-6 lg:gap-10 justify-center items-center;
+}
+.single-campus .gallery .gallery-item .gallery-icon{
+ @apply text-center;
+}
+.single-campus .gallery .gallery-item img{
+    @apply h-12 w-auto object-contain ;
+}

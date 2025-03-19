@@ -17,6 +17,7 @@
  */
 @import "tailwindcss/preflight";
 @import "./custom/base.css";
+@import "./custom/single-campus.css";
 
 /**
  * Because this file shares code with `tailwind-editor.css`, we import the

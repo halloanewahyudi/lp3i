@@ -202,10 +202,10 @@ add_filter( 'use_block_editor_for_post', '__return_false' );
 add_filter( 'use_block_editor_for_post_type', '__return_false' );
 
 // disable content editor on page 
-function disable_editor_on_page() {
+/* function disable_editor_on_page() {
     remove_post_type_support('page', 'editor');
 }
-add_action('admin_init', 'disable_editor_on_page');
+add_action('admin_init', 'disable_editor_on_page'); */
 
 
 
@@ -224,6 +224,8 @@ require get_template_directory() . '/inc/template-functions.php';
  * Component functions.
  */
 require get_template_directory() . '/inc/template-components.php';
+
+
 
 
 /**  create location list
