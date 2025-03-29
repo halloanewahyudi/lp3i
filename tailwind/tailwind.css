@@ -18,6 +18,7 @@
 @import "tailwindcss/preflight";
 @import "./custom/base.css";
 @import "./custom/single-campus.css";
+@import "./custom/tentang-kami.css";
 
 /**
  * Because this file shares code with `tailwind-editor.css`, we import the

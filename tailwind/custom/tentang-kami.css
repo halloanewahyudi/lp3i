@@ -1,0 +1,7 @@
+.tk-section h2{
+    @apply  mb-5 inline-block  border-b-4 border-secondary;
+ }
+ .tk-section h2::after{
+    content: '';
+    @apply  w-full h-1 block  border-b border-secondary;
+ }

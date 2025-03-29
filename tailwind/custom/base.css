@@ -72,6 +72,10 @@ ul{
 	line-height: 1.6;
 	padding: 0;
 	margin: 0;
+	@apply pl-3 list-disc;
+}
+li{
+	@apply list-disc;
 }
 
 .text-info{
@@ -134,3 +138,4 @@ input[type="submit"].wpcf7-form-control {
 .page-numbers.current{
 	@apply bg-primary text-light;
 }
+

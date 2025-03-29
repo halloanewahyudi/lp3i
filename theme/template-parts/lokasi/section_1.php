@@ -28,5 +28,4 @@ $image_map = get_field('image_map');
             </div>
         </div>
     </div>
-  
 </section>
