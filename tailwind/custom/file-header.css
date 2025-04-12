@@ -29,10 +29,10 @@ Underscores and Varia are distributed under the terms of the GNU GPL v2 or later
     @apply w-full;
 }
 .menu-primary-container > .menu{
-    @apply flex flex-col  lg:flex-row items-center;
+    @apply flex flex-col  lg:flex-row items-center list-none p-0;
 }
 #primary-menu.menu li{
-    @apply relative;
+    @apply relative list-none;
 }
 #primary-menu.menu li a{
     @apply flex items-center gap-2 py-2 px-4 rounded-full hover:bg-primary-dark hover:text-light duration-200;

@@ -11,9 +11,9 @@ if (have_posts()) : while (have_posts()) : the_post();
 
          </div>
          <div class="container">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 w-full">
-               <div class="lg:col-span-3"></div>
-               <div class="lg:col-span-9">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 w-full">
+               <div class="lg:col-span-3"></div> <!-- sidebar -->
+               <div class="lg:col-span-9"> <!-- content -->
                   <h1 class="text-3xl lg:text-5xl font-bold mb-3 text-secondary pt-32 pb-10"><?php the_title(); ?></h1>
                   <div id="tentang-lp3i" class="tk-section">
                      <h2 class="text-3xl lg:text-4xl font-bold mb-5 text-secondary">Tentang LP3I</h2>
@@ -27,9 +27,19 @@ if (have_posts()) : while (have_posts()) : the_post();
                      <h2 class="text-3xl lg:text-4xl font-bold mb-5 text-secondary">Sejarah</h2>
                      <?php get_template_part('template-parts/tentang-kami/sejarah'); ?>
                   </div>
-                  <div id="sejarah" class="tk-section">
+                  <div id="visi-misi" class="tk-section">
                      <h2 class="text-3xl lg:text-4xl font-bold mb-5 text-secondary">Visi Misi</h2>
                      <?php get_template_part('template-parts/tentang-kami/visi-misi'); ?>
+                  </div>
+                  <div id="tribe" class="tk-section">
+                     <h2 class="text-3xl lg:text-4xl font-bold mb-5 text-secondary">Yuk, kenalan dengan Tribe LP3I!
+                     </h2>
+                     <?php get_template_part('template-parts/tentang-kami/tribe'); ?>
+                  </div>
+                  <div id="alasan" class="tk-section">
+                     <h2 class="text-3xl lg:text-4xl font-bold mb-5 text-secondary">Kenapa harus LP3I?
+                     </h2>
+                     <?php get_template_part('template-parts/tentang-kami/kenapa'); ?>
                   </div>
                </div>
             </div>
