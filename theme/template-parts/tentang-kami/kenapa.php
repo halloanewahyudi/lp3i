@@ -22,8 +22,11 @@ $kenapa_harus_lp3i = get_field('kenapa_harus_lp3i'); ?>
     </div>
 </div>
 
-<div>
+<div class="mt-5">
     <?php echo $kenapa_harus_lp3i['description']; ?>
+    <a href="<?php echo $kenapa_harus_lp3i['button_link']['url']; ?>" class="btn btn-primary mt-4">
+        <?php echo $kenapa_harus_lp3i['button_link']['title']; ?>
+    </a>
 </div>
 
 </div>

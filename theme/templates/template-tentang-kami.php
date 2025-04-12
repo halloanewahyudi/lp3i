@@ -7,10 +7,8 @@ if (have_posts()) : while (have_posts()) : the_post();
 
 ?>
       <div class="template-clean">
-         <div>
 
-         </div>
-         <div class="container">
+         <div class="container mb-20">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 w-full">
                <div class="lg:col-span-3"></div> <!-- sidebar -->
                <div class="lg:col-span-9"> <!-- content -->
