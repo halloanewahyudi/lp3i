@@ -39,10 +39,10 @@ document.addEventListener('DOMContentLoaded', function () {
 	const splideBlog = document.querySelector('#splide-blog');
 	if (splideBlog) {
 		console.log('Splide blog found, initializing...');
-	const blogSlider =	new Splide(splideBlog, {
+		const blogSlider = new Splide(splideBlog, {
 			type: 'loop',
 			autoplay: true,
-			pauseOnHover:false,
+			pauseOnHover: false,
 			perPage: 4,
 			gap: '1rem',
 			perMove: 1,
@@ -59,48 +59,73 @@ document.addEventListener('DOMContentLoaded', function () {
 				640: {
 					perPage: 1,
 				},
-			}
-		})
+			},
+		});
 		blogSlider.mount();
 		// create custom arrows
 		const prevArrow = document.getElementById('splide-blog-prev');
 		const nextArrow = document.getElementById('splide-blog-next');
-		prevArrow.addEventListener('click',() => blogSlider.go('<'));	
+		prevArrow.addEventListener('click', () => blogSlider.go('<'));
 		nextArrow.addEventListener('click', () => blogSlider.go('>'));
-
 	} else {
 		console.log('Splide blog not found');
 	}
 
-	// sticky 
+	// sticky
 	//========================
-	let stickyElements = document.querySelectorAll(".sticky-on-scroll");
-    let navbar = document.querySelector("nav");
-    let footer = document.querySelector("#end-sticky");
+	let stickyElements = document.querySelectorAll('.sticky-on-scroll');
+	let navbar = document.querySelector('nav');
+	let footer = document.querySelector('#end-sticky');
 
-    if (stickyElements.length > 0 && footer) {
-        let navbarHeight = navbar?.offsetHeight || 80; // Jika navbar tidak ditemukan, default 80px
-        let triggerOffset = navbarHeight + 100; // Sticky mulai setelah navbar + 100px
+	if (stickyElements.length > 0 && footer) {
+		let navbarHeight = navbar?.offsetHeight || 80; // Jika navbar tidak ditemukan, default 80px
+		let triggerOffset = navbarHeight + 100; // Sticky mulai setelah navbar + 100px
 
-        window.addEventListener("scroll", function () {
-            stickyElements.forEach((el) => {
-                let footerOffset = footer.offsetTop - window.innerHeight + 50; // 50px sebelum menyentuh footer
-                let scrollY = window.scrollY;
+		window.addEventListener('scroll', function () {
+			stickyElements.forEach((el) => {
+				let footerOffset = footer.offsetTop - window.innerHeight + 50; // 50px sebelum menyentuh footer
+				let scrollY = window.scrollY;
 
-                if (scrollY > triggerOffset && scrollY < footerOffset) {
-                    el.classList.add("fixed", "top-24");
-                    el.classList.remove("absolute", "bottom-0");
-                } else if (scrollY >= footerOffset) {
-                    el.classList.remove("fixed", "top-24");
-                    el.classList.add("hidden");
-                } else {
-                    el.classList.remove("fixed", "absolute", "bottom-0");
-					el.classList.add("hidden");
-                }
-            });
-        });
-    }
+				if (scrollY > triggerOffset && scrollY < footerOffset) {
+					el.classList.add('fixed', 'top-24');
+					el.classList.remove('absolute', 'bottom-0');
+				} else if (scrollY >= footerOffset) {
+					el.classList.remove('fixed', 'top-24');
+					el.classList.add('hidden');
+				} else {
+					el.classList.remove('fixed', 'absolute', 'bottom-0');
+					el.classList.add('hidden');
+				}
+			});
+		});
+	}
+
+	// kurikulum splide
+	const kurikulumSplide = document.querySelector('#kurikulum-splide');
+	if (kurikulumSplide) {
+		console.log('Kurikulum Splide found, initializing...');
+		new Splide(kurikulumSplide, {
+			type: 'loop',
+			//autoplay: true,
+			//pauseOnHover: false,
+			perPage: 2,
+			gap: '1rem',
+			perMove: 1,
+			speed: 1500,
+			pagination: false,
+			arrows: false,
+			breakpoints: {
+				1024: {
+					perPage: 2,
+				},
+				768: {
+					perPage: 2,
+				},
+				640: {
+					perPage: 1,
+				},
+			},
+		}).mount();
+	} // end if kurikulumSplide
 	// end script
 });
-
-

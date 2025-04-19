@@ -169,16 +169,26 @@ ul.menu-samping {
 .menu-samping::before{
 	content: "";
 	display: inline-block;
-	@apply h-full w-0.5 border-l-primary absolute top-0 left-1;	
+	position: absolute;
+	left: 5px;
+	top: 0;
+	bottom: 0;
+	@apply border-secondary border-l; 
+	
 }
 
 .menu-samping li {
-	@apply flex  gap-2 items-center list-none relative;
+	@apply flex  gap-2 items-center list-none relative pl-5;
 }
-
+/* .menu-samping li:before{
+	content: "";
+	display: inline-block;
+   @apply w-2 h-2 bg-light rounded-full shrink-0 absolute left-0 top-1/2 -translate-y-1/2;
+} */
 .menu-samping li.active {
 	@apply text-primary font-bold ;
  }
  .menu-samping li.active::before {
-	@apply w-3 h-3 bg-secondary  rounded-full ;	
+	content:'';
+	@apply w-3 h-3 bg-secondary  rounded-full shrink-0 absolute left-0 top-1/2 -translate-y-1/2;	
 }
