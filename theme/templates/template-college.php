@@ -70,15 +70,15 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
                      </h2>
                      <?php get_template_part('template-parts/college/output'); ?>
                   </div>
-                  <div id="tribe" class="tk-section">
+                  <div id="kurikulum" class="tk-section">
                      <h2 class="text-3xl lg:text-4xl font-bold mb-5 text-secondary">Kurikulum LP3I College
                      </h2>
                      <?php get_template_part('template-parts/college/kurikulum'); ?>
                   </div>
-                  <div id="alasan" class="tk-section">
-                     <h2 class="text-3xl lg:text-4xl font-bold mb-5 text-secondary">Kenapa harus LP3I?
+                  <div id="pilihan-program" class="tk-section">
+                     <h2 class="text-3xl lg:text-4xl font-bold mb-5 text-secondary">Pilihan Program Studi LP3I College
                      </h2>
-                     <?php get_template_part('template-parts/tentang-kami/kenapa'); ?>
+                     <?php get_template_part('template-parts/tentang-kami/pilihan-program'); ?>
                   </div>
                </div>
             </div>

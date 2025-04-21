@@ -104,12 +104,12 @@ document.addEventListener('DOMContentLoaded', function () {
 	const kurikulumSplide = document.querySelector('#kurikulum-splide');
 	if (kurikulumSplide) {
 		console.log('Kurikulum Splide found, initializing...');
-		new Splide(kurikulumSplide, {
+	 const kurikulumSlider =	new Splide(kurikulumSplide, {
 			type: 'loop',
 			//autoplay: true,
 			//pauseOnHover: false,
 			perPage: 2,
-			gap: '1rem',
+			gap: '2rem',
 			perMove: 1,
 			speed: 1500,
 			pagination: false,
@@ -125,7 +125,13 @@ document.addEventListener('DOMContentLoaded', function () {
 					perPage: 1,
 				},
 			},
-		}).mount();
+		})
+		kurikulumSlider.mount();
+		 // Event klik manual
+		 const prevArrow = document.getElementById('kurikulum-splide-prev');
+		 const nextArrow = document.getElementById('kurikulum-splide-next');
+		 prevArrow.addEventListener('click', () => kurikulumSlider.go('<'));
+		 nextArrow.addEventListener('click', () => kurikulumSlider.go('>'));
 	} // end if kurikulumSplide
 	// end script
 });
