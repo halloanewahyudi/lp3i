@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	const kurikulumSplide = document.querySelector('#kurikulum-splide');
 	if (kurikulumSplide) {
 		console.log('Kurikulum Splide found, initializing...');
-	 const kurikulumSlider =	new Splide(kurikulumSplide, {
+		const kurikulumSlider = new Splide(kurikulumSplide, {
 			type: 'loop',
 			//autoplay: true,
 			//pauseOnHover: false,
@@ -125,13 +125,49 @@ document.addEventListener('DOMContentLoaded', function () {
 					perPage: 1,
 				},
 			},
-		})
+		});
 		kurikulumSlider.mount();
-		 // Event klik manual
-		 const prevArrow = document.getElementById('kurikulum-splide-prev');
-		 const nextArrow = document.getElementById('kurikulum-splide-next');
-		 prevArrow.addEventListener('click', () => kurikulumSlider.go('<'));
-		 nextArrow.addEventListener('click', () => kurikulumSlider.go('>'));
+		// Event klik manual
+		const prevArrow = document.getElementById('kurikulum-splide-prev');
+		const nextArrow = document.getElementById('kurikulum-splide-next');
+		prevArrow.addEventListener('click', () => kurikulumSlider.go('<'));
+		nextArrow.addEventListener('click', () => kurikulumSlider.go('>'));
 	} // end if kurikulumSplide
+
+	// pilihan-program splide
+	const pilihanProgramSplide = document.querySelector('#pilihan-program-splide');
+	if (pilihanProgramSplide) {
+		console.log('Pilihan Program Splide found, initializing...');
+		const pilihanProgramSlider = new Splide(pilihanProgramSplide, {
+			type: 'loop',
+			//autoplay: true,
+			//pauseOnHover: false,
+			perPage: 2,
+			gap: '2rem',
+			perMove: 1,
+			speed: 1500,
+			pagination: false,
+			arrows: false,
+			breakpoints: {
+				1024: {
+					perPage: 2,
+				},
+				768: {
+					perPage: 2,
+				},
+				640: {
+					perPage: 1,
+				},
+			},
+		});
+		pilihanProgramSlider.mount();
+		// Event klik manual
+		const prevArrow2 = document.getElementById('pilihan-program-splide-prev');
+		const nextArrow2 = document.getElementById('pilihan-program-splide-next');
+		prevArrow2.addEventListener('click', () => pilihanProgramSlider.go('<'));
+		nextArrow2.addEventListener('click', () => pilihanProgramSlider.go('>'));
+	} // end if pilihanProgramSplide
+
 	// end script
+	//=============================
 });

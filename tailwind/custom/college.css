@@ -21,12 +21,15 @@
 
 /* Kurikulum 
 ================================*/
-#kurikulum-splide .splide__slide{
+#kurikulum-splide .splide__slide, 
+#pilihan-program-splide .splide__slide{
   @apply bg-light/20 rounded-xl overflow-hidden shadow;
 }
-#kurikulum-splide .splide__slide p{
+#kurikulum-splide .splide__slide p,
+#pilihan-program-splide .splide__slide p{
     @apply flex gap-2;;
 }
-#kurikulum-splide .splide__slide p::before{
+#kurikulum-splide .splide__slide p::before,
+#pilihan-program-splide .splide__slide p::before{
    content: "⯈";
 }
