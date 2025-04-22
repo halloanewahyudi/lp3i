@@ -10,9 +10,9 @@
 
 ?>
 
-<header id="masthead" class="bg-primary text-white py-2">
+<header id="masthead" class="bg-primary text-white py-2 ">
 	<div class="container">
-		<div class="flex justify-between items-center">
+		<div class="flex justify-between items-center max-h-20 ">
 			<div>
 				<?php if (has_custom_logo()): echo get_custom_logo();
 				else :
@@ -20,7 +20,7 @@
 				endif; ?>
 			</div>
 			<nav id="site-navigation" aria-label="<?php esc_attr_e('Main Navigation', 'lp3i'); ?>">
-
+                
 				<?php
 				wp_nav_menu(
 					array(
@@ -32,12 +32,14 @@
 				?>
 			</nav><!-- #site-navigation -->
          <div class="flex items-center gap-4">
-			<a href="whatsapp://send?phone=+628123456789" class="text-white"><i class="bi bi-whatsapp"></i> </a>
-			<button id="btn-search"><i class="bi bi-search"></i></button>
+			<a href="whatsapp://send?phone=+628123456789" class="text-white text-2xl"><i class="bi bi-whatsapp"></i> </a>
+			<button id="btn-search text-2xl"><i class="bi bi-search"></i></button>
+			<button id="btn-menu" class="lg:hidden text-2xl"> <i class="bi bi-list"></i> </button>
 		 </div>
 		</div>
 	</div>
 </header><!-- #masthead -->
+
 <?php if(!is_front_page()): ?>
 <div class="bg-gradient-to-r from-primary via-secondary to-tertiary py-1">
 	<div class="container">

@@ -20,6 +20,31 @@ Alpine.start();
 document.addEventListener('DOMContentLoaded', function () {
 	console.log('Splide script loaded');
 
+	// Menu mobile 
+const menuMobile = document.querySelector('#btn-menu');
+const menuContent = document.querySelector('.menu-primary-container');
+
+menuMobile.addEventListener('click', function () {
+  menuContent.classList.toggle('open-menu');
+  console.log('Menu clicked');
+
+  // sub menu dropdown
+  const parentMenus = menuContent.querySelectorAll('.menu-item-has-children > a');
+
+  parentMenus.forEach(link => {
+    // Cegah duplicate event listener
+    link.removeEventListener('click', handleSubmenuClick); 
+    link.addEventListener('click', handleSubmenuClick);
+  });
+});
+
+function handleSubmenuClick(e) {
+  e.preventDefault();
+  const parentLi = this.parentElement;
+  parentLi.classList.toggle('submenu-open');
+}
+
+
 	// Cek elemen home slideshow
 	const homeSlideshow = document.querySelector('#home-slideshow');
 	if (homeSlideshow) {
