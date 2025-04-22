@@ -164,7 +164,10 @@ blockquote p {
 
 /* menu sampnig */
 ul.menu-samping {
-	@apply flex flex-col gap-2 ml-0 pl-0 relative;
+	@apply flex flex-col gap-2 ml-0 pl-0 relative ;
+}
+.menu-samping{
+	max-width: 280px;
 }
 .menu-samping::before{
 	content: "";

@@ -14,7 +14,7 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
          {menu:'Penyetaraan Jenjang Pendidikan Vokasi', link:'#jenjang-vokasi'},
          {menu:'Jenis-Jenis Pendidikan Tinggi Vokasi',link:'#jenis-pendidikan'},
          {menu:'3 Komponen Kompetensi yang Harus Kamu Miliki Menurut KKNI', link:'#kompetensi'},
-         {menu:'Penyetaraan Kandungan Unsur Kompetensi Lulusan Pendidikan 2 Tahun Siap Kerja berdasarkan KKNI',link:'unsur-kompetensi'}
+         {menu:'Penyetaraan Kandungan Unsur Kompetensi Lulusan Pendidikan 2 Tahun Siap Kerja berdasarkan KKNI',link:'#unsur-kompetensi'}
          ], 
          activeMenu: ''
          }"
@@ -30,7 +30,7 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
    sections.forEach(section => observer.observe(section));
 }">
          <div class="container">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 w-full">
                <div class="lg:col-span-3 mt-20">
                   <div class="sticky-on-scroll hidden lg:block  transition-all duration-300">
                      <div>
@@ -107,16 +107,16 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
                      <?php get_template_part('template-parts/college/jenis-pendidikan'); ?>
                   </div>
 
-                  <div id="kompetensi" class="tk-section">
-                     <h2 class="text-3xl lg:text-4xl font-bold mb-5 text-secondary">3 Komponen Kompetensi yang Harus Kamu Miliki Menurut KKNI
-                     </h2>
-                     <?php get_template_part('template-parts/college/kompetensi'); ?>
-                  </div>
-
                   <div id="unsur-kompetensi" class="tk-section">
                      <h2 class="text-3xl lg:text-4xl font-bold mb-5 text-secondary">Penyetaraan Kandungan Unsur Kompetensi Lulusan Pendidikan 2 Tahun Siap Kerja berdasarkan KKNI
                      </h2>
                      <?php get_template_part('template-parts/college/unsur-kompetensi'); ?>
+                  </div>
+                 
+                  <div id="kompetensi" class="tk-section">
+                     <h2 class="text-3xl lg:text-4xl font-bold mb-5 text-secondary">3 Komponen Kompetensi yang Harus Kamu Miliki Menurut KKNI
+                     </h2>
+                     <?php get_template_part('template-parts/college/kompetensi'); ?>
                   </div>
 
                </div> <!-- end content -->

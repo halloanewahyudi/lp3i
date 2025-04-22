@@ -1,15 +1,15 @@
 /* Lokasi 
 ================================*/
-#lokasi ul{
+#lokasi ul, #jenis-pendidikan ul{
     @apply pl-0 ml-0;
 }
-#lokasi ul li{
+#lokasi ul li, #jenis-pendidikan ul li{
     @apply flex gap-2 list-none items-center justify-between border-b border-primary/50 pb-1 mb-1;
 }
-#lokasi li:after{
+#lokasi li:after, #jenis-pendidikan li:after{
     content: '⯈';
 }
-#lokasi ul li a{
+#lokasi ul li a, #jenis-pendidikan ul li a{
     @apply hover:text-primary duration-300 ease-in-out;
 }
 
@@ -32,4 +32,18 @@
 #kurikulum-splide .splide__slide p::before,
 #pilihan-program-splide .splide__slide p::before{
    content: "⯈";
+}
+
+/* jenjang vokasi 
+================================*/
+#jenjang-vokasi .tablepress {
+    --head-bg-color:var(--wp--preset--color--primary);
+    --head-text-color:var(--wp--preset--color--light);
+}
+#jenjang-vokasi .tablepress tbody{
+    @apply bg-light/20;
+}
+#jenjang-vokasi #tablepress-1 tr.row-7,
+#jenjang-vokasi #tablepress-1 tr.row-8{
+    @apply bg-secondary text-white;
 }

@@ -7,6 +7,10 @@
  * https://tailwindcss.com/docs/adding-custom-styles#adding-custom-utilities
  */
 
+ .row{
+   @apply flex flex-wrap gap-5;
+ }
+
  .fade-up {
   animation-name: fade-up;
   animation-duration: .35s;
