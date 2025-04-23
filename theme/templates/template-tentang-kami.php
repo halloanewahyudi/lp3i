@@ -25,7 +25,7 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
    sections.forEach(section => observer.observe(section));
 }">
          <div class="container">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 w-full">
                <div class="lg:col-span-3 mt-20">
                   <div class="sticky-on-scroll hidden lg:block  transition-all duration-300">
                      <div>
