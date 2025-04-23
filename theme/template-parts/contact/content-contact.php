@@ -48,8 +48,11 @@ $label_kantor_yayasan_lp3i_indonesia = get_field_object('kantor_yayasan_lp3i_ind
                 </div>
             </div>
         </div>
-        <div>
-         <?php echo do_shortcode( '[contact-form-7 id="27452" title="Contact form 1"]',true ) ?>
+        <div class="bg-light p-6 rounded-xl">
+            <p>Kirim pesan mu <br>
+                Tim kami akan menghubungi segera</p>
+            <hr class="border-secondary/30 py-5 pb-5">
+            <?php echo do_shortcode('[contact-form-7 id="27452" title="Contact form 1"]', true) ?>
         </div>
     </div>
 </div>
