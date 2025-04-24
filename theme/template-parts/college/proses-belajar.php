@@ -17,7 +17,7 @@ $content = $proses_belajar['content'];
         <?php for ($i = 1; $i <= 3; $i++):
             ${"kolom_$i"} = $proses_belajar["kolom_$i"]; ?>
             <div>
-                <img src="<?php echo ${"kolom_$i"}['image']['url']; ?>" alt="<?php echo ${"kolom_$i"}['image']['title']; ?>" class="w-full">
+                <img src="<?php echo ${"kolom_$i"}['image']['url']; ?>" alt="<?php echo ${"kolom_$i"}['image']['title']; ?>" class="w-full mb-3">
                 <?php echo ${"kolom_$i"}['deskripsi'] ; ?>
             </div>
         <?php endfor; ?>

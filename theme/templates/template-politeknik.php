@@ -55,19 +55,19 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
 
                   <div id="jenjang-pendidikan" class="tk-section">
                      <h2 class="text-3xl lg:text-4xl font-bold mb-5 text-secondary">Jenjang Pendidikan</h2>
-                     <?php get_template_part('template-parts/college/jenjang-pendidikan'); ?>
+                     <?php get_template_part('template-parts/politeknik/jenjang-pendidikan'); ?>
                   </div>
 
                   <div id="lokasi" class="tk-section">
                      <h2 class="text-3xl lg:text-4xl font-bold mb-5 text-secondary">Lokasi</h2>
                      <div class="grid grid-cols-1 lg:grid-cols-4 gap-10 text-secondary">
-                        <?php get_template_part('template-parts/college/lokasi'); ?>
+                        <?php get_template_part('template-parts/politeknik/lokasi'); ?>
                      </div>
                   </div>
 
                   <div id="proses-belajar" class="tk-section">
                      <h2 class="text-3xl lg:text-4xl font-bold mb-5 text-secondary">Proses Belajar</h2>
-                     <?php get_template_part('template-parts/college/proses-belajar'); ?>
+                     <?php get_template_part('template-parts/politeknik/proses-belajar'); ?>
                   </div>
 
                   <div id="output" class="tk-section">
@@ -78,13 +78,12 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
                   </div>
 
                   <div id="kurikulum" class="tk-section">
-                     <h2 class="text-3xl lg:text-4xl font-bold mb-5 text-secondary">Kurikulum LP3I College
-                     </h2>
-                     <?php get_template_part('template-parts/college/kurikulum'); ?>
+                     <h2 class="text-3xl lg:text-4xl font-bold mb-5 text-secondary">Kurikulum Politeknik LP3I dan Politeknik Group</h2>
+                     <?php get_template_part('template-parts/politeknik/kurikulum'); ?>
                   </div>
 
                   <div id="pilihan-program" class="tk-section">
-                     <h2 class="text-3xl lg:text-4xl font-bold mb-5 text-secondary">Pilihan Program Studi LP3I College
+                     <h2 class="text-3xl lg:text-4xl font-bold mb-5 text-secondary">Pilihan Program Studi di Politeknik LP3I
                      </h2>
                      <?php get_template_part('template-parts/college/pilihan-program'); ?>
                   </div>
