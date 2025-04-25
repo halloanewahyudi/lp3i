@@ -168,7 +168,7 @@ ul.menu-samping {
 }
 
 .menu-samping {
-	max-width: 280px;
+	max-width: 220px;
 }
 
 .menu-samping::before {
@@ -205,9 +205,9 @@ ul.menu-samping {
 	@apply mb-10;
 }
 .tk-section h2{
-	@apply relative inline-block pt-5;
+	@apply relative inline-block font-extrabold ;
 }
 .tk-section h2::before {
 	content: '';
-	@apply  h-2  block bg-secondary rounded-full w-full relative left-0 top-0;
+	@apply  h-2  block bg-secondary rounded-full w-full relative left-0 top-0 mb-5;
 }
