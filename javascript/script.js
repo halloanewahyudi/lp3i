@@ -164,7 +164,7 @@ function handleSubmenuClick(e) {
 	if (pilihanProgramSplide) {
 		console.log('Pilihan Program Splide found, initializing...');
 		const pilihanProgramSlider = new Splide(pilihanProgramSplide, {
-			type: 'loop',
+			type: 'slide',
 			//autoplay: true,
 			//pauseOnHover: false,
 			perPage: 2,

@@ -58,9 +58,9 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
                      <?php get_template_part('template-parts/politeknik/jenjang-pendidikan'); ?>
                   </div>
 
-                  <div id="lokasi" class="tk-section">
+                  <div id="lokasi-politeknik" class="tk-section">
                      <h2 class="text-3xl lg:text-4xl font-bold mb-5 text-secondary">Lokasi</h2>
-                     <div class="grid grid-cols-1 lg:grid-cols-4 gap-10 text-secondary">
+                     <div class="list-lokasi">
                         <?php get_template_part('template-parts/politeknik/lokasi'); ?>
                      </div>
                   </div>
@@ -85,13 +85,13 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
                   <div id="pilihan-program" class="tk-section">
                      <h2 class="text-3xl lg:text-4xl font-bold mb-5 text-secondary">Pilihan Program Studi di Politeknik LP3I
                      </h2>
-                     <?php get_template_part('template-parts/college/pilihan-program'); ?>
+                     <?php get_template_part('template-parts/politeknik/pilihan-program'); ?>
                   </div>
 
                   <div id="pendidikan-siap-kerja" class="tk-section">
-                     <h2 class="text-3xl lg:text-4xl font-bold mb-5 text-secondary">Apa Itu Pendidikan 2 Tahun Siap Kerja?
+                     <h2 class="text-3xl lg:text-4xl font-bold mb-5 text-secondary">Apa itu Politeknik ?
                      </h2>
-                     <?php get_template_part('template-parts/college/apa-itu-pendidikan'); ?>
+                     <?php get_template_part('template-parts/politeknik/apa-itu-politeknik'); ?>
                   </div>
 
                   <div id="jenjang-vokasi" class="tk-section">
@@ -103,7 +103,7 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
                   <div id="jenis-pendidikan" class="tk-section">
                      <h2 class="text-3xl lg:text-4xl font-bold mb-5 text-secondary">Jenis-Jenis Pendidikan Tinggi Vokasi
                      </h2>
-                     <?php get_template_part('template-parts/college/jenis-pendidikan'); ?>
+                     <?php get_template_part('template-parts/politeknik/jenis-vokasi'); ?>
                   </div>
 
                   <div id="unsur-kompetensi" class="tk-section">

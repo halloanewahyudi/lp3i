@@ -20,6 +20,7 @@
 @import "./custom/single-campus.css";
 @import "./custom/tentang-kami.css";
 @import "./custom/college.css";
+@import "./custom/politeknik.css";
 
 /**
  * Because this file shares code with `tailwind-editor.css`, we import the
