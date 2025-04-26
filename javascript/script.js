@@ -20,30 +20,31 @@ Alpine.start();
 document.addEventListener('DOMContentLoaded', function () {
 	console.log('Splide script loaded');
 
-	// Menu mobile 
-const menuMobile = document.querySelector('#btn-menu');
-const menuContent = document.querySelector('.menu-primary-container');
+	// Menu mobile
+	const menuMobile = document.querySelector('#btn-menu');
+	const menuContent = document.querySelector('.menu-primary-container');
 
-menuMobile.addEventListener('click', function () {
-  menuContent.classList.toggle('open-menu');
-  console.log('Menu clicked');
+	menuMobile.addEventListener('click', function () {
+		menuContent.classList.toggle('open-menu');
+		console.log('Menu clicked');
 
-  // sub menu dropdown
-  const parentMenus = menuContent.querySelectorAll('.menu-item-has-children > a');
+		// sub menu dropdown
+		const parentMenus = menuContent.querySelectorAll(
+			'.menu-item-has-children > a'
+		);
 
-  parentMenus.forEach(link => {
-    // Cegah duplicate event listener
-    link.removeEventListener('click', handleSubmenuClick); 
-    link.addEventListener('click', handleSubmenuClick);
-  });
-});
+		parentMenus.forEach((link) => {
+			// Cegah duplicate event listener
+			link.removeEventListener('click', handleSubmenuClick);
+			link.addEventListener('click', handleSubmenuClick);
+		});
+	});
 
-function handleSubmenuClick(e) {
-  e.preventDefault();
-  const parentLi = this.parentElement;
-  parentLi.classList.toggle('submenu-open');
-}
-
+	function handleSubmenuClick (e) {
+		e.preventDefault();
+		const parentLi = this.parentElement;
+		parentLi.classList.toggle('submenu-open');
+	}
 
 	// Cek elemen home slideshow
 	const homeSlideshow = document.querySelector('#home-slideshow');
@@ -99,31 +100,34 @@ function handleSubmenuClick(e) {
 	// sticky
 	//========================
 	let stickyElements = document.querySelectorAll('.sticky-on-scroll');
-	let navbar = document.querySelector('nav');
-	let footer = document.querySelector('#end-sticky');
+let navbar = document.querySelector('nav');
+let footer = document.querySelector('#end-sticky');
 
-	if (stickyElements.length > 0 && footer) {
-		let navbarHeight = navbar?.offsetHeight || 80; // Jika navbar tidak ditemukan, default 80px
-		let triggerOffset = navbarHeight + 100; // Sticky mulai setelah navbar + 100px
+if (stickyElements.length > 0 && footer) {
+	window.addEventListener('scroll', function () {
+		stickyElements.forEach((el) => {
+			let footerOffset = footer.offsetTop - window.innerHeight + 50;
+			let scrollY = window.scrollY;
 
-		window.addEventListener('scroll', function () {
-			stickyElements.forEach((el) => {
-				let footerOffset = footer.offsetTop - window.innerHeight + 50; // 50px sebelum menyentuh footer
-				let scrollY = window.scrollY;
-
-				if (scrollY > triggerOffset && scrollY < footerOffset) {
-					el.classList.add('fixed', 'top-24');
-					el.classList.remove('absolute', 'bottom-0');
-				} else if (scrollY >= footerOffset) {
-					el.classList.remove('fixed', 'top-24');
-					el.classList.add('hidden');
-				} else {
-					el.classList.remove('fixed', 'absolute', 'bottom-0');
-					el.classList.add('hidden');
-				}
-			});
+			if (scrollY < footerOffset) {
+				// Muncul dari awal sampai sebelum footer
+				el.classList.add('fixed', 'top-20', 'sticky-visible');
+				el.classList.remove('sticky-hidden');
+			} else {
+				// Hilang kalau mendekati footer
+				el.classList.remove('fixed', 'top-20', 'sticky-visible');
+				el.classList.add('sticky-hidden');
+			}
 		});
-	}
+	});
+
+	// Langsung tampilkan saat halaman load pertama kali (tanpa harus nunggu scroll)
+	stickyElements.forEach((el) => {
+		el.classList.add('fixed', 'top-32', 'sticky-visible');
+		el.classList.remove('sticky-hidden');
+	});
+}
+
 
 	// kurikulum splide
 	const kurikulumSplide = document.querySelector('#kurikulum-splide');
@@ -160,7 +164,9 @@ function handleSubmenuClick(e) {
 	} // end if kurikulumSplide
 
 	// pilihan-program splide
-	const pilihanProgramSplide = document.querySelector('#pilihan-program-splide');
+	const pilihanProgramSplide = document.querySelector(
+		'#pilihan-program-splide'
+	);
 	if (pilihanProgramSplide) {
 		console.log('Pilihan Program Splide found, initializing...');
 		const pilihanProgramSlider = new Splide(pilihanProgramSplide, {
@@ -187,10 +193,18 @@ function handleSubmenuClick(e) {
 		});
 		pilihanProgramSlider.mount();
 		// Event klik manual
-		const prevArrow2 = document.getElementById('pilihan-program-splide-prev');
-		const nextArrow2 = document.getElementById('pilihan-program-splide-next');
-		prevArrow2.addEventListener('click', () => pilihanProgramSlider.go('<'));
-		nextArrow2.addEventListener('click', () => pilihanProgramSlider.go('>'));
+		const prevArrow2 = document.getElementById(
+			'pilihan-program-splide-prev'
+		);
+		const nextArrow2 = document.getElementById(
+			'pilihan-program-splide-next'
+		);
+		prevArrow2.addEventListener('click', () =>
+			pilihanProgramSlider.go('<')
+		);
+		nextArrow2.addEventListener('click', () =>
+			pilihanProgramSlider.go('>')
+		);
 	} // end if pilihanProgramSplide
 
 	// end script

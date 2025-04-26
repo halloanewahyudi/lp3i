@@ -7,14 +7,15 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
          { menu:'Jenjang Pendidikan', link:'#jenjang-pendidikan' },
          { menu:'Lokasi', link:'#lokasi-politeknik' },
          { menu:'Proses Belajar', link:'#proses-belajar' },
-         { menu:'Output Pendidikan Vokasi di LP3I College', link:'#output' },
+         { menu:'Output Lulusan', link:'#output' },
          { menu:'Kurikulum ', link:'#kurikulum' },
          { menu:'Pilihan Program Studi Politeknik LP3I ', link:'#pilihan-program' },
          {menu:'Apa Itu Politeknik?', link:'#pendidikan-siap-kerja'},
          {menu:'Penyetaraan Jenjang Pendidikan Vokasi', link:'#jenjang-vokasi'},
          {menu:'Jenis-Jenis Pendidikan Tinggi Vokasi',link:'#jenis-pendidikan'},
-         {menu:'3 Komponen Kompetensi yang Harus Kamu Miliki Menurut KKNI', link:'#kompetensi'},
-         {menu:'Penyetaraan Kandungan Unsur Kompetensi Lulusan Pendidikan 2 Tahun Siap Kerja berdasarkan KKNI',link:'#unsur-kompetensi'}
+          {menu:'Penyetaraan  KKNI',link:'#unsur-kompetensi'},
+         {menu:'Kompetensi yang Harus Kamu Miliki', link:'#kompetensi'}
+        
          ], 
          activeMenu: ''
          }"
@@ -32,11 +33,12 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
          <div class="container">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 w-full">
                <div class="lg:col-span-3 mt-20">
+
                   <div class="sticky-on-scroll hidden lg:block  transition-all duration-300">
                      <div>
-                        <?php $logo_politeknik = get_field('logo_politeknik', 'option'); 
-                        if($logo_politeknik):?>
-                        <img src="<?php echo $logo_politeknik['url']; ?>" alt="<?php echo $logo_politeknik['title']; ?>" class="w-32 h-auto object-contain mb-6">
+                        <?php $logo_politeknik = get_field('logo_politeknik', 'option');
+                        if ($logo_politeknik): ?>
+                           <img src="<?php echo $logo_politeknik['url']; ?>" alt="<?php echo $logo_politeknik['title']; ?>" class="w-24 h-auto object-contain mb-6">
                         <?php endif; ?>
                         <ul class="menu-samping">
                            <template x-for="menu in menus">
@@ -48,10 +50,11 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
                               </li>
                            </template>
                         </ul>
-                     </div>
-                     <?php $tombol_hubungi_kami = get_field('tombol_hubungi_kami', 'option'); ?>
+                        <?php $tombol_hubungi_kami = get_field('tombol_hubungi_kami', 'option'); ?>
                      <a href="<?php echo $tombol_hubungi_kami['url']; ?>" class="btn btn-primary w-full block mt-10 max-w-max"><?php echo $tombol_hubungi_kami['title'];  ?></a>
-                  </div>
+                 
+                     </div>
+                 </div>
                </div> <!-- sidebar -->
                <div class="lg:col-span-9"> <!-- content -->
 
@@ -76,7 +79,7 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
 
                   <div id="output" class="tk-section">
                      <h2 class="text-3xl lg:text-4xl font-bold mb-5 text-secondary">
-                     Output Pendidikan Vokasi di Politeknik LP3I dan Politeknik Grup
+                        Output Pendidikan Vokasi di Politeknik LP3I dan Politeknik Grup
                      </h2>
                      <?php get_template_part('template-parts/college/output'); ?>
                   </div>
@@ -115,13 +118,13 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
                      </h2>
                      <?php get_template_part('template-parts/college/unsur-kompetensi'); ?>
                   </div>
-                 
+
                   <div id="kompetensi" class="tk-section">
                      <h2 class="text-3xl lg:text-4xl font-bold mb-5 text-secondary">3 Komponen Kompetensi yang Harus Kamu Miliki Menurut KKNI
                      </h2>
                      <?php get_template_part('template-parts/college/kompetensi'); ?>
                   </div>
-       
+
                </div> <!-- end content -->
             </div>
             <div id="end-sticky"></div>

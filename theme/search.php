@@ -10,12 +10,12 @@
 get_header();
 ?>
 
-	<section id="primary">
-		<main id="main">
+	<section id="primary" class="template-clean pb-20">
+		<main id="main" class="max-w-screen-md mx-auto">
 
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
+			<header class="page-header pt-16 text-center">
 				<?php
 				printf(
 					/* translators: 1: search result title. 2: search term. */
@@ -30,7 +30,8 @@ get_header();
 			// Start the Loop.
 			while ( have_posts() ) :
 				the_post();
-				get_template_part( 'template-parts/content/content', 'excerpt' );
+			 // Run the loop for the search to output the results.
+				get_template_part( 'template-parts/content/content', 'search' );
 
 				// End the loop.
 			endwhile;
